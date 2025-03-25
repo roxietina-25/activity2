@@ -1,0 +1,290 @@
+@font-face {
+  font-family: 'Pixelated Elegance';
+  src: url('pixelatedelegance.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pixelated Elegance', sans-serif;
+  color: #fff;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+  width: 100%;
+  background-image: url('animatedgirl.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(10, 10, 15, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: #fff;
+  border: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.wrapper h1 {
+  font-size: clamp(24px, 5vw, 36px);
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(207, 243, 243);
+  text-shadow: white;
+  width: 100%;
+}
+
+.wrapper p {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: clamp(14px, 3vw, 16px);
+  color: #ccc;
+  width: 100%;
+}
+
+.wrapper img {
+  display: block;
+  margin: 0 auto 30px;
+  border-radius: 20px;
+  border: 2px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.wrapper h2 {
+  font-size: clamp(18px, 4vw, 24px);
+  text-align: center;
+  margin: 30px 0 20px;
+  color: #fff;
+  width: 100%;
+}
+
+.wrapper ul {
+  list-style-type: none;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wrapper ul li {
+  margin: 5px 0;
+  padding: 10px 20px;
+  background-color: rgba(182, 245, 224, 0.1);
+  border-radius: 5px;
+  border-left: 3px solid #fff;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.wrapper ul li:hover {
+  background-color: rgba(0, 255, 170, 0.2);
+  transform: translateX(5px);
+}
+
+/* Enhanced Button Styling */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #0fa, #0ff);
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 15px 0;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: clamp(12px, 3vw, 14px);
+  min-width: 150px;
+}
+
+/* Button hover effect with glow */
+.btn:hover {
+  color: #000;
+  transform: translateY(-3px);
+  letter-spacing: 2px;
+}
+
+/* Button active state */
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Button before element for hover animation */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.input-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box h2 {
+  margin-top: 3px;
+}
+
+.input-box form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-box label {
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.input-box input[type="text"],
+.input-box input[type="email"] {
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 0 15px;
+  margin: 5px;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-box input[type="text"]:focus,
+.input-box input[type="email"]:focus {
+  border-color: #fff;
+}
+
+.input-box input[type="submit"] {
+  width: fit-content;
+  align-self: center;
+}
+
+a {
+  color: #0fa;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a:hover {
+  text-shadow: 0 0 8px;
+}
+
+/* Fix the margin and padding for specific elements */
+.wrapper > * {
+  margin: 10px 0;
+  padding: 0;
+}
+
+.wrapper form label,
+.wrapper form input {
+  margin: 5px 0;
+  padding: 8px;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 15px;
+  }
+  
+  .input-box {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+  
+  .wrapper {
+    padding: 12px;
+    border-radius: 8px;
+  }
+  
+  .wrapper img {
+    margin-bottom: 20px;
+  }
+  
+  .input-box {
+    padding: 12px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    min-width: 120px;
+  }
+  
+  .wrapper ul li {
+    padding: 8px 15px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .btn:active {
+    background: linear-gradient(45deg, #0ff, #0fa);
+    box-shadow: 0 0 25px rgba(0, 255, 170, 0.8);
+  }
+  
+  .wrapper ul li:active {
+    background-color: rgba(0, 255, 170, 0.2);
+    transform: translateX(5px);
+  }
+}
