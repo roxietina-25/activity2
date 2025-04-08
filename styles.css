@@ -117,7 +117,7 @@ body::before {
   transform: translateX(5px);
 }
 
-/* Enhanced Button Styling */
+
 .btn {
   display: inline-flex;
   justify-content: center;
@@ -141,19 +141,19 @@ body::before {
   min-width: 150px;
 }
 
-/* Button hover effect with glow */
+
 .btn:hover {
   color: #000;
   transform: translateY(-3px);
   letter-spacing: 2px;
 }
 
-/* Button active state */
+
 .btn:active {
   transform: translateY(1px);
 }
 
-/* Button before element for hover animation */
+
 .btn::before {
   content: '';
   position: absolute;
@@ -224,7 +224,7 @@ a:hover {
   text-shadow: 0 0 8px;
 }
 
-/* Fix the margin and padding for specific elements */
+
 .wrapper > * {
   margin: 10px 0;
   padding: 0;
@@ -236,7 +236,7 @@ a:hover {
   padding: 8px;
 }
 
-/* Media Queries for Responsive Design */
+/*Responsive Design */
 @media screen and (max-width: 768px) {
   .wrapper {
     padding: 15px;
@@ -276,7 +276,7 @@ a:hover {
   }
 }
 
-/* Touch device optimizations */
+
 @media (hover: none) {
   .btn:active {
     background: linear-gradient(45deg, #0ff, #0fa);
